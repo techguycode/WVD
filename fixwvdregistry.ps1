@@ -26,3 +26,4 @@ Invoke-Expression "$scriptPath $argumentList"
 New-ItemProperty "HKLM:SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\$sxsstackver" -Name "fReverseConnectMode" -Value 1 -PropertyType "DWord"
 
 write-host "You need to reboot to take effect" -ForegroundColor Red
+Restart-Computer -force
