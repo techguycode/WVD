@@ -9,7 +9,7 @@ $listofsxs = $subkeys -match 'rdp-sxs'
 if (($listofsxs).count -gt 0){
     #backing up registry
     $date = get-date -Format 'MMddyyyy_hhmmss'
-    $filename = "c:\fixwvd\sxsregsave_$date.reg"
+    $filename = "c:\windows\temp\sxsregsave_$date.reg"
     Invoke-Command  {reg export 'HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations' $filename}
 }
 
