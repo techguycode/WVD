@@ -25,5 +25,5 @@ Invoke-Expression "$scriptPath $argumentList"
 #Add windows 10 fix key
 New-ItemProperty "HKLM:SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\$sxsstackver" -Name "fReverseConnectMode" -Value 1 -PropertyType "DWord"
 
-write-host "You need to reboot to take effect" -ForegroundColor Red
+write-host "Rebooting VM for settings take effect" -ForegroundColor Red
 Restart-Computer -force
